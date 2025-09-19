@@ -12,6 +12,15 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
 
+/*
+init modeli load et
+run mat olarak resim maske al
+
+vscode kısmı da ekle
+
+models kısmını da hallet
+*/
+
 const std::string model_path = "./models/lama_fp32.onnx";
 const std::string image_path = "./images/input_image.jpg";
 const std::string mask_path = "./images/dilated_mask.png";
