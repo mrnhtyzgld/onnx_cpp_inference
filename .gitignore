@@ -1,0 +1,4 @@
+.vscode/
+
+models/*
+!models/lama_fp32.onnx
