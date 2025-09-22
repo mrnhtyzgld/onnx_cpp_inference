@@ -3,10 +3,9 @@
 Small C++ example that loads a model, reads an image and a mask, runs inference, and saves the result as a timestamped PNG. Works with single-image input and supports either 1-channel or 3-channel outputs.
 
 ## Prerequisites
-- C++17 toolchain (GCC/Clang/MSVC)
+- C++
 - OpenCV (core, imgcodecs, dnn)
 - ONNX Runtime (C++ API)
-- CMake ≥ 3.16
 
 ## Features
 
