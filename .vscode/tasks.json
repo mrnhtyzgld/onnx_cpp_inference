@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-infer",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "set -euo pipefail; CXX=$(command -v g++-13 || command -v g++); ORT_DIR=${ORT_DIR:-/opt/onnxruntime}; mkdir -p build; \"$CXX\" -std=c++17 -O2 -g -Iinclude -I\"$ORT_DIR\"/include $(pkg-config --cflags opencv4) src/InferenceRunner.cpp src/main.cpp -L\"$ORT_DIR\"/lib -Wl,-rpath,\"$ORT_DIR\"/lib -lonnxruntime $(pkg-config --libs opencv4) -ldl -lpthread -o build/infer"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build OpenCV + ONNX Runtime"
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-.vscode/
-
 models/*
 !models/.gitkeep
 outputs/*
